@@ -103,7 +103,7 @@
 <div class="wrap">
 
   <h1>Privacy Policy for Notes</h1>
-  <p class="meta"><strong>App name:</strong> Smart Notes - Tasks & Voice</p>
+  <p class="meta"><strong>App name:</strong> Smart Notes - Ai Powered</p>
   <p class="meta"><strong>Developer:</strong> Abhay Bhagat</p>
   <p class="meta"><strong>Contact email:</strong> <a href="mailto:abhaybhagat170@gmail.com">abhaybhagat170@gmail.com</a></p>
 
@@ -112,11 +112,11 @@
   <div class="summary-box">
     <h3 style="margin-top:0;">Summary</h3>
     <ul>
-      <li>Your notes, attachments, and app-lock password are <strong>stored only on your device</strong> unless you choose to publish a note.</li>
+      <li>Your notes, attachments, and app-lock password are <strong>stored only on your device</strong> and are never sent to us. There are no accounts and no note-publishing/sharing feature.</li>
       <li>The optional <strong>AI Assistant runs entirely on your device</strong> — your notes are never sent to us or to any AI company to generate a response.</li>
-      <li>If you create an account or <strong>publish</strong> a note, that specific content is sent to our backend provider, Supabase, to make sharing possible.</li>
+      <li>On first launch, the App asks for your <strong>name</strong> and logs basic <strong>usage analytics</strong> (a random device ID, app version, and how long you use the app per session) to our backend provider, <strong>Supabase</strong>, so we can see how the app is being used.</li>
       <li>The App shows ads through <strong>Google AdMob</strong>, which collects device/advertising identifiers to serve and measure ads (see Section 6).</li>
-      <li>We do not use any analytics or tracking SDKs beyond the ad SDK described below, and we do not sell your personal information.</li>
+      <li>We do not use any other analytics or tracking SDKs, and we do not sell your personal information.</li>
     </ul>
   </div>
 
@@ -130,8 +130,20 @@
     <li><strong>Reminders</strong> — dates/times you set for note reminders are stored locally and used only to schedule notifications on your device.</li>
     <li><strong>App settings and preferences</strong> (theme, sort order, onboarding status, etc.).</li>
   </ul>
+  <p>The App has no accounts, no sign-in, and no feature to publish or share a note outside the device — your notes and attachments never leave your device through the App itself.</p>
 
-  <h3>1.2 Device permissions</h3>
+  <h3>1.2 Usage analytics (sent to Supabase)</h3>
+  <p>On first launch, before you can use the App, you're asked to enter a name. This — along with some basic technical details — is sent to our backend provider, Supabase, so we can see how the App is being used. Specifically:</p>
+  <ul>
+    <li><strong>The name you enter</strong> — used only as a label for this device's usage data; it isn't used to gate or personalize anything in the App.</li>
+    <li><strong>A randomly generated device ID</strong> — created on your device the first time you open the App and stored locally. It is not your device's advertising ID or any other hardware identifier, and it resets if you reinstall the App.</li>
+    <li><strong>App version</strong> you're running.</li>
+    <li><strong>Session timestamps and duration</strong> — when you open and background the App, and how long each session lasted (very short sessions, such as a brief permission-dialog interruption, aren't logged).</li>
+    <li><strong>Last-seen timestamp</strong>, updated each session.</li>
+  </ul>
+  <p>This data lets us see, in aggregate, how many people use the App, how often, for how long, and on which app version — it is not used for advertising, profiling, or personalization. If the App is offline when this data would sync, it's simply skipped for that session; entering a name is still required to continue past first launch, but the App otherwise works fully offline as described in Section 7.</p>
+
+  <h3>1.3 Device permissions</h3>
   <p>The App requests the following permissions, only for the features you actively use:</p>
   <table>
     <tr><th>Permission</th><th>Why it's requested</th></tr>
@@ -140,7 +152,7 @@
     <tr><td>Photos / Videos / Storage</td><td>To let you pick existing images or videos to attach to a note, and to save/export/open files (e.g. PDF export)</td></tr>
     <tr><td>Notifications</td><td>To show local reminder notifications for notes you've scheduled, and for the optional "Quick Assistant" notification shortcut</td></tr>
   </table>
-  <p>Media and audio you capture stay on your device unless it is part of a note you explicitly publish (attachments themselves are not uploaded when you publish — only the note's text content is).</p>
+  <p>Media and audio you capture stay on your device and are never uploaded anywhere by the App.</p>
 
   <h2>2. The On-Device AI Assistant</h2>
   <p>The App includes an optional AI Assistant that helps you create, edit, find, and organize notes using natural language.</p>
@@ -154,13 +166,15 @@
   <p>We use the information described above only to:</p>
   <ul>
     <li>Provide core app functionality (storing and organizing your notes locally);</li>
+    <li>Understand basic usage of the App — how many people use it, how often, and for how long (Section 1.2);</li>
     <li>Serve and measure advertising, as described in Section 6.</li>
   </ul>
-  <p>We do not use your information for our own advertising or profiling, and we do not operate any analytics or crash-reporting SDKs in the App.</p>
+  <p>We do not use your information for our own advertising or profiling, and we do not operate any other analytics or crash-reporting SDKs in the App.</p>
 
   <h2>4. Third-Party Services</h2>
   <p>The App relies on the following third-party service providers:</p>
   <ul>
+    <li><strong>Supabase</strong> (our backend provider for the usage analytics described in Section 1.2. Supabase stores this data on our behalf and processes it according to its own privacy and security policies: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>).</li>
     <li><strong>Hugging Face</strong> (used only to download the AI model file; no personal or note data is sent).</li>
     <li><strong>Google AdMob</strong> (used to display in-app advertising; see Section 6).</li>
   </ul>
@@ -169,7 +183,8 @@
   <h2>5. Data Storage &amp; Security</h2>
   <ul>
     <li>Local data (notes, attachments, password hash, settings) is stored in the App's private storage area on your device and is not accessible to other apps.</li>
-    <li>App-lock passwords and account passwords are never stored or transmitted in plain text.</li>
+    <li>The usage analytics described in Section 1.2 (name, device ID, app version, session data) is stored on Supabase's infrastructure; we do not separately duplicate it on our own servers.</li>
+    <li>App-lock passwords are never stored or transmitted in plain text.</li>
   </ul>
   <p>No method of electronic storage or transmission is 100% secure, and we cannot guarantee absolute security.</p>
 
@@ -190,13 +205,14 @@
     <li>Opt out of personalized ads and reset your advertising identifier in your device's <strong>Settings → Privacy → Ads</strong> (Android) or equivalent;</li>
     <li>Manage your Google ad settings at <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</li>
   </ul>
-  <p>Notes content, attachments, and account information are <strong>not</strong> shared with AdMob or any advertiser — only the device/advertising data described above, collected directly by the AdMob SDK, is involved.</p>
+  <p>Notes content, attachments, and the usage-analytics data described in Section 1.2 are <strong>not</strong> shared with AdMob or any advertiser — only the device/advertising data described above, collected directly by the AdMob SDK, is involved.</p>
 
   <h2>7. Your Choices</h2>
   <ul>
-    <li>You can use the App entirely offline.</li>
+    <li>You can use the App entirely offline after the initial name entry — no internet connection is required for any core note-taking feature.</li>
     <li>You can deny any individual device permission (camera, microphone, photos, notifications); the related feature simply won't be available.</li>
     <li>You can export or delete your notes locally at any time.</li>
+    <li>You can request deletion of the usage-analytics data associated with your device (name, device ID, and session history) by contacting us at <a href="mailto:abhaybhagat170@gmail.com">abhaybhagat170@gmail.com</a>.</li>
     <li>You can opt out of personalized advertising as described in Section 6.</li>
   </ul>
 
